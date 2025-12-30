@@ -1,4 +1,28 @@
-# 🔒 Singleton Design Pattern (Java)
+# 🧠 Design Patterns in Action (Java)
+
+A **hands-on, executable collection of design patterns** implemented in Java, focused on:
+- Real-world analogies
+- Clean structure
+- Observable runtime behavior
+- Easy extension as more patterns are added
+
+> This README evolves as new patterns (Builder, Strategy, Observer, etc.) are introduced.
+
+---
+
+## 📦 Patterns Implemented
+
+| Pattern | Type | Status |
+|------|------|------|
+| Singleton | Creational | ✅ |
+| Factory | Creational | ✅ |
+| Builder | Creational | ⏳ |
+| Strategy | Behavioral | ⏳ |
+| Observer | Behavioral | ⏳ |
+
+---
+
+# 🔒 Singleton Design Pattern
 
 ### 📌 Intent
 Ensure **only one instance** of a class exists and provide a **global access point** to it.
@@ -22,8 +46,8 @@ A **Printer Manager** in an office:
 
 ### 🏗️ Implementation Overview
 - `PrinterManager` manages printer state
-- `getManager()` creates the instance once
-- All users receive the **same object**
+- Instance is created once
+- All users receive the **same object reference**
 
 ---
 
@@ -34,14 +58,11 @@ A **Printer Manager** in an office:
 
 Printer Manager Created - I'm in-charge of the printer
 📋 Printer Status: READY
-Printing : Monthly ReportforAlice
+Printing : Monthly Report for Alice
 
 📋 Printer Status: BUSY - Monthly Report(Alice)
-Sorry Bob,printer is busy with: Monthly Report(Alice)
+Sorry Bob, printer is busy with: Monthly Report(Alice)
 
 ✅ Alice and Bob are using the SAME PrinterManager!
-   This is the Singleton pattern working!
    aliceManager memory address: 681842940
    bobManager memory address: 681842940
-
-🎯 Lab Complete! You've implemented the Singleton pattern!
