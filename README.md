@@ -18,51 +18,58 @@ A **hands-on, executable collection of design patterns** implemented in Java, fo
 | Factory | Creational | ✅ |
 | Builder | Creational | ⏳ |
 | Strategy | Behavioral | ⏳ |
-| Observer | Behavioral | ⏳ |
+| Observer | Behavioral | ✅|
 
----
 
-# 🔒 Singleton Design Pattern
+=== Email Observer Pattern Demo ===
+Added: Inbox Counter
+Added: Popup Notifier
 
-### 📌 Intent
-Ensure **only one instance** of a class exists and provide a **global access point** to it.
+Observers registered: 2
 
----
+📧 New email from: boss@company.com
+📬 Inbox: 1 unread emails
+🔔 POPUP: New email from boss@company.com
+Message: Meeting at 3 PM today...
 
-### 💡 Example Use Case
-A **Printer Manager** in an office:
-- Only **one printer controller** should exist
-- Multiple users share the same printer
-- Prevents conflicting print jobs
+📧 New email from: friend@gmail.com
+📬 Inbox: 2 unread emails
+🔔 POPUP: New email from friend@gmail.com
+Message: Want to grab lunch?...
 
----
+=== Results ===
+Total unread: 2
+Demo complete!
 
-### 🧠 Key Characteristics
-- 🔐 Private constructor
-- 🧩 Single shared instance
-- 📍 Controlled access via `getManager()`
-
----
-
-### 🏗️ Implementation Overview
-- `PrinterManager` manages printer state
-- Instance is created once
-- All users receive the **same object reference**
-
----
-
-### ▶️ Sample Output
-
-```text
 🏢 Welcome to our office! Let's use the printer...
 
 Printer Manager Created - I'm in-charge of the printer
 📋 Printer Status: READY
-Printing : Monthly Report for Alice
+Printing : Monthly ReportforAlice
 
 📋 Printer Status: BUSY - Monthly Report(Alice)
-Sorry Bob, printer is busy with: Monthly Report(Alice)
+Sorry Bob,printer is busy with: Monthly Report(Alice)
 
 ✅ Alice and Bob are using the SAME PrinterManager!
-   aliceManager memory address: 681842940
-   bobManager memory address: 681842940
+This is the Singleton pattern working!
+aliceManager memory address: 1392838282
+bobManager memory address: 1392838282
+
+🎯 Lab Complete! You've implemented the Singleton pattern!
+
+☕ Welcome to Coffee Factory Demo!
+
+📝 Customer orders: espresso
+🏭 Creating Espresso
+Brewing Strong Espresso
+💰 Price: $2.5
+
+📝 Customer orders: latte
+🏭 Creating Latte
+Brewing Creamy Latte
+💰 Price: $4.5
+
+📝 Customer orders: mocha
+❌ Unknown coffee type: mocha
+
+✅ Factory Pattern Demo Complete!
